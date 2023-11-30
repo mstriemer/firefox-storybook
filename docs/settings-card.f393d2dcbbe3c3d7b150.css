@@ -1,0 +1,28 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+
+  & > * {
+    border-top: 1px solid #dedede;
+  }
+
+  & > moz-toggle::part(label):hover {
+    background-color: #efefef;
+  }
+
+  & > moz-toggle:not([description])::part(label) {
+    padding-block: 16px;
+  }
+
+  & > moz-toggle[description]::part(label) {
+    padding-block-start: 16px;
+  }
+  & > moz-toggle[description] {
+    padding-block-end: 16px;
+  }
+}
